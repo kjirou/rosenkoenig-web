@@ -6,6 +6,7 @@
     "export": "expo export:web",
     "serve": "serve web-build",
     "start": "npm run web",
+    "tsc": "tsc",
     "web": "expo start --web"
   },
   "dependencies": {
