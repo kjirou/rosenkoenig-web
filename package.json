@@ -10,12 +10,6 @@
     "tsc": "tsc",
     "web": "expo start --web"
   },
-  "jest": {
-    "preset": "jest-expo",
-    "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
-    ]
-  },
   "dependencies": {
     "@expo/webpack-config": "^18.0.1",
     "expo": "~48.0.15",
