@@ -1,11 +1,11 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import App from "./App";
+import Root from "./Root";
 
-describe("<App />", () => {
+describe("<Root />", () => {
   test("it has 1 child", () => {
-    const tree = renderer.create(<App />).toJSON();
+    const tree = renderer.create(<Root />).toJSON();
     expect((tree as any).children.length).toBe(1);
   });
 });
