@@ -1,5 +1,6 @@
 import Root from "./src/Root";
 
-export default function App() {
+const App = () => {
   return <Root />;
-}
+};
+export default App;
