@@ -1,21 +1,25 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-
-const Root = () => {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-};
+import { StyleSheet, View } from "react-native";
+import TileGrid from "./components/TileGrid";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    // 48 * 9(tiles) + 48(left and right margins)
+    width: 480,
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
   },
 });
+
+const Root = () => {
+  return (
+    <View style={styles.container}>
+      <TileGrid />
+      <StatusBar style="auto" />
+    </View>
+  );
+};
+
 export default Root;
