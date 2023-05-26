@@ -14,10 +14,10 @@ const styles = StyleSheet.create<{ [key in string]: object }>({
       for (let x = 0; x < TILE_GRID_SIZE; x++) {
         keysForEachTile[`tile-${x}-${y}`] = {
           ...StyleSheet.absoluteFillObject,
-          top: y * 36 + 18,
-          left: x * 36 + 18,
-          width: 36,
-          height: 36,
+          top: y * 40,
+          left: x * 40,
+          width: 40,
+          height: 40,
         };
       }
     }

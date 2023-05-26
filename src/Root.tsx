@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   // iOS / Android の端末一覧を眺めて、キリが良い数値だったのがこれだった。
   container: {
     flex: 1,
-    // 36 * 9(tiles) + 36(left and right margins)
+    // 40 * 9(tiles)
     width: 360,
     height: 720,
     backgroundColor: "#fff",
