@@ -1,23 +1,23 @@
 import { StyleSheet, View } from "react-native";
 
-const MAX_TILES_LENGTH = 9;
+const TILE_GRID_SIZE = 9;
 
 const styles = StyleSheet.create<{ [key in string]: object }>({
   container: {
-    width: 480,
-    height: 480,
+    width: 360,
+    height: 720,
   },
   ...(() => {
     // "tile-{x}-{y}"
     const keysForEachTile: { [key in string]: object } = {};
-    for (let y = 0; y < MAX_TILES_LENGTH; y++) {
-      for (let x = 0; x < MAX_TILES_LENGTH; x++) {
+    for (let y = 0; y < TILE_GRID_SIZE; y++) {
+      for (let x = 0; x < TILE_GRID_SIZE; x++) {
         keysForEachTile[`tile-${x}-${y}`] = {
           ...StyleSheet.absoluteFillObject,
-          top: y * 48,
-          left: x * 48,
-          width: 48,
-          height: 48,
+          top: y * 36 + 18,
+          left: x * 36 + 18,
+          width: 36,
+          height: 36,
         };
       }
     }
@@ -30,7 +30,19 @@ const Tile = (props: { styleKey: string }) => {
 };
 
 const TileGrid = () => {
-  return <View style={styles.container}></View>;
+  return (
+    <View style={styles.container}>
+      {(() => {
+        const tiles = [];
+        for (let y = 0; y < TILE_GRID_SIZE; y++) {
+          for (let x = 0; x < TILE_GRID_SIZE; x++) {
+            tiles.push(<Tile styleKey={`tile-${x}-${y}`} />);
+          }
+        }
+        return tiles;
+      })()}
+    </View>
+  );
 };
 
 export default TileGrid;
